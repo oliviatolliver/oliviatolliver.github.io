@@ -4,7 +4,7 @@
 
     <div class="group">
       
-        <form action="https://formspree.io/f/{{site.formspree-key}}" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/{{site.formspree-key}}" method="POST">
             <input type="hidden" name="_next" value="https://oliviatolliver.github.io" />
             <label for="name">Name</label>
             <input type="text" id="name">
@@ -18,4 +18,20 @@
             <button type="submit">Send Message</button>
         </form>
     </div>
+
+    <script>
+        var form = document.getElementById("contact-form");
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { "Accept": "application/json" }
+            }).then(function(response) {
+            if (response.ok) {
+                window.location.href = "https://oliviatolliver.github.io";
+            }
+            });
+        });
+    </script>
   </section>
