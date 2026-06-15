@@ -16,6 +16,7 @@
             <textarea id="message" cols = "30" rows="10" name="message"></textarea>
 
             <button type="submit">Send Message</button>
+            <p id="form-success" style="display:none; color:blue;">✓ Message sent! I'll get back to you soon.</p>
         </form>
     </div>
 
@@ -29,9 +30,11 @@
             headers: { "Accept": "application/json" }
             }).then(function(response) {
             if (response.ok) {
-                window.location.href = "https://oliviatolliver.github.io";
+                form.reset();
+                document.getElementById("form-success").style.display = "block";
             }
             });
         });
     </script>
+
   </section>
