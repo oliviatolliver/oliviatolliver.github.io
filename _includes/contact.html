@@ -5,7 +5,6 @@
     <div class="group">
       
         <form id="contact-form" action="https://formspree.io/f/{{site.formspree-key}}" method="POST">
-            <input type="hidden" name="_next" value="https://oliviatolliver.github.io" />
             <label for="name">Name</label>
             <input type="text" id="name">
 
@@ -32,6 +31,7 @@
             if (response.ok) {
                 form.reset();
                 document.getElementById("form-success").style.display = "block";
+                window.location.href = "https://oliviatolliver.github.io/#contact";
             }
             });
         });
