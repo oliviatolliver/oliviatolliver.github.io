@@ -89,6 +89,9 @@ colors: # this is the basic theme
   background: "#f5f0e8"
   light_background: "#ede7d9"
 
+# FROM BETHANY JONES CANVA TEMPLATE
+# background and text: #e7dfd8  (background)  |  #231f20  (text)
+# good color scheme: #d1d3d4  |  #b0a092  |  #827263  |  #1f1b11  |  #574533 (all from photo)
 
 #########################################################################################################
 # Build settings for the site. Editing the below may cause the site to malfunction.
