@@ -22,11 +22,9 @@ html {
 }
 
 body {
-    padding: 0 50px;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 a {
