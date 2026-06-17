@@ -260,11 +260,16 @@ nav .mobile-nav {
 
 /*SECTION 2: PROJECT GRID */
 .project-grid-section {
-    margin-bottom: 100px;
-    margin-top: 50px;
+    margin: 0;
+    padding: 80px 50px;
     display:flex;
     flex-direction: column;
     justify-content: center; 
+    background-color: var(--light-background-color);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
    }
 
 .project-grid-section h2{
@@ -374,9 +379,15 @@ nav .mobile-nav {
 
 /* SECTION 3: SKILLS */
 .skills-section {
-    margin-bottom: 100px;
+    margin: 0;
+    padding: 80px 50px;
     display:flex;
     flex-direction: column;
+    background-color: var(--background-color);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .skills-section h2 {
@@ -433,12 +444,13 @@ nav .mobile-nav {
 
 /* SECTION 4: CONTACT */
 .contact-section {
-    padding: 25px 25px;
-    max-width: 600px;
-    margin: 0 auto; 
-    border-radius: 20px; 
-    margin-bottom: 100px;
-      
+    margin: 0; 
+    padding: 80px 50px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--light-background-color);
 }
 
 .contact-section h2 {
