@@ -149,16 +149,10 @@ nav .mobile-nav {
 /* SECTION 1: Hero */
 .hero-section {
     padding: 0 50px;
-    margin: 50px 0;
+    min-height: 100vh;
     display: flex;  /* This makes .hero-section a flex container */
-
-
-    border: 2px solid var(--border-color);
-    border-image: linear-gradient(
-        45deg, var(--border-color) 1%, transparent 1%, transparent 99%, var(--border-color) 99%
-        ) 
-        1;
-    
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .hero-section .group {

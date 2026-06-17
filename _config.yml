@@ -82,12 +82,12 @@ formspree-key: xbdewzwq  # https://formspree.io/f/{8-digit key}
 
 # Active theme (Updatethis to switch themes). Make sure to keep the indentation the same.
 colors: # this is the basic theme
-  text: "#231f20"
-  border: "#d4c9b5"
-  link: "#6b4c2a"
-  highlight: "#8b5e3c"
-  background: "#f5f0e8"
-  light_background: "#ede7d9"
+  text: "#1a1a1a"
+  border: "#c5b2a3"
+  link: "#2b2623"
+  highlight: "#2b2623"
+  background: "#ebd9cc"
+  light_background: "#f3e8e0"
 
 # FROM BETHANY JONES CANVA TEMPLATE
 # background and text: #e7dfd8  (background)  |  #231f20  (text)
