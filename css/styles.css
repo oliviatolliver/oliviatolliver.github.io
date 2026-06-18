@@ -193,9 +193,9 @@ nav .mobile-nav {
 
 .hero-section .group {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 0 10%;
     gap: 40px;
     border-radius: 8px;
 }
@@ -802,7 +802,7 @@ footer p {
 
 
 @media (max-width: 768px) {
-    /* NEVBAR*/
+    /* NAVBAR*/
     .desktop-nav {
         display: none;
     }
@@ -855,11 +855,8 @@ footer p {
         transform: rotate(-45deg);
         bottom: 0;
     } 
-    
-  
 
     
-      
     /*SECTION 1: Hero */
     .hero-section .group .text h2 {
         flex-direction: column-reverse;
@@ -870,6 +867,10 @@ footer p {
     .hero-section .group .text h2 .external-links i {
         font-size: 16px; /* Example: reducing icon size */
         margin: 0
+    }
+
+    .hero-section .group {
+        padding: 0 5%;
     }
 
     .arrow {
