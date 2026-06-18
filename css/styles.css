@@ -8,6 +8,7 @@
   --highlight-color: {{ site.colors.highlight }};
   --background-color: {{ site.colors.background }};
   --light-background-color: {{ site.colors.light_background }};
+  --nav-height: 80px;
 }
 
 * {
@@ -64,7 +65,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 25px 0;
-    height: 80px;
+    height: var(--nav-height);
     align-items: center;
     position: relative;
 }
@@ -148,9 +149,9 @@ nav .mobile-nav {
 /* SECTION 1: Hero */
 .hero-section {
     padding: 0 50px;
-    height: 100vh;
+    height: calc(100vh - var(--nav-height));
     min-height: 600px;
-    max-height: 900px;
+    max-height: calc(900px - var(--nav-height));
     display: flex;  /* This makes .hero-section a flex container */
     flex-direction: column;
     justify-content: center;
@@ -189,6 +190,9 @@ nav .mobile-nav {
     padding: 0;
     gap: 40px;
     border-radius: 8px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .hero-section .text {
