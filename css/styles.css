@@ -74,6 +74,8 @@ nav {
     height: var(--nav-height);
     align-items: center;
     position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 nav .left a {
