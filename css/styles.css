@@ -150,7 +150,8 @@ nav .mobile-nav {
     padding: 0 50px;
     min-height: 100vh;
     display: flex;  /* This makes .hero-section a flex container */
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     border-bottom: 1px solid var(--border-color);
     background-color: var(--background-color);
     position: relative;
