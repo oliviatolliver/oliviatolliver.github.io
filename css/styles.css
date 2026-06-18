@@ -250,19 +250,6 @@ nav .mobile-nav {
     color: var(--text-color);
 }
 
-.hero-section .headshot {
-    flex: 3;
-    display: flex;
-    justify-content: right;
-}
-
-.hero-section .headshot img {
-    width: 400px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
 /* NAVIGATION ARROW */
 .arrow{
     margin-top: 125px;
