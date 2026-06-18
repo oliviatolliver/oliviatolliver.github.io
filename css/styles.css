@@ -50,14 +50,20 @@ h3 {
 
 span {
     color: var(--text-color);
-  }
+}
 
 p {
     color: var(--text-color);
     font-size: calc(9px + 0.5vw);
     margin-bottom: 1em;
     padding: 0;
-  }
+}
+
+.content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
   
 
 /* NAVBAR */
@@ -190,9 +196,6 @@ nav .mobile-nav {
     padding: 0;
     gap: 40px;
     border-radius: 8px;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .hero-section .text {
