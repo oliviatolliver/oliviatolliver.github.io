@@ -152,6 +152,31 @@ nav .mobile-nav {
     display: flex;  /* This makes .hero-section a flex container */
     align-items: center;
     border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.hero-arrow {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.hero-arrow a {
+    color: var(--link-color);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;  /* This makes .hero-section a flex container */
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-arrow a:hover {
+    color: var(--text-color);
 }
 
 .hero-section .group {
