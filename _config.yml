@@ -13,7 +13,7 @@ title: Olivia Tolliver's Portfolio # This is what shows up in the tab of the bro
 
 # Hero Section
 name: Olivia Tolliver
-headline: B.S. Mechanical Engineering at Cornell
+headline: B.S. Mechanical Engineering at Cornell University
 description: >- # dont remove this line. this will ignore all new lines until the next section
   Working at the intersection of robotics, product design, and mechanical systems, with projects ranging from 
   an auger-based soil collection system to a step-powered energy-harvesting device for cardiac monitioring.
@@ -85,8 +85,8 @@ colors:
   border: "#c5b2a3"
   link: "#2b2623"
   highlight: "#2b2623"
-  background: "#ebd9cc"
-  light_background: "#f3e8e0"
+  background: "#b8aca2"
+  light_background: "#e7dfd8"
 
 #colors:
 #  text: "#1a1a1a"
