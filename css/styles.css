@@ -148,7 +148,9 @@ nav .mobile-nav {
 /* SECTION 1: Hero */
 .hero-section {
     padding: 0 50px;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 900px;
     display: flex;  /* This makes .hero-section a flex container */
     flex-direction: column;
     justify-content: center;
