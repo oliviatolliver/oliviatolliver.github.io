@@ -13,11 +13,10 @@ title: Olivia Tolliver's Portfolio # This is what shows up in the tab of the bro
 
 # Hero Section
 name: Olivia Tolliver
-headline: Mechanical Engineering Student at Cornell | Robotics, Prototyping, and Product Design Enthusiast
+headline: B.S. Mechanical Engineering at Cornell
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  Mechanical Engineering student at Cornell University with hands-on experience in robotics, wearable systems, and 
-  mechanism design. Currently a member and incoming AstroTech Subteam Lead on Cornell Mars Rover engineering project team.
-  Passionate about building things that work - from auger-based soil collection systems to pneumatic cardiac monitors. 
+  Working at the intersection of robotics, product design, and mechanical systems, with projects ranging from 
+  an auger-based soil collection system to a step-powered energy-harvesting device for cardiac monitioring.
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/avatar.jpeg
