@@ -2,15 +2,72 @@
 ---
 
 :root {
-  --text-color: {{ site.colors.text }};
+  /* --text-color: {{ site.colors.text }};
   --border-color: {{ site.colors.border }};
   --link-color: {{ site.colors.link }};
   --highlight-color: {{ site.colors.highlight }};
   --background-color: {{ site.colors.background }};
-  --light-background-color: {{ site.colors.light_background }};
+  --light-background-color: {{ site.colors.light_background }}; */
   --nav-height: 80px;
+
+  /* Core palette */
+  --color-greige: #aea093;
+  --color-linen: #f6f0eb;
+  --color-warm: #ebe6de;
+  --color-dark: #2c221c;
+  --color-muted: #827263;
+
 }
 
+  /* GREIGE theme - hero or any warm accent section */
+  .bg-greige {
+    background-color: var(--color-greige);
+    --section-text: var(--color-dark);
+    --section-link: var(--color-dark);
+    --section-highlight: var(--color-muted);
+    --section-border: #9d8f83;
+    --card-bg: var(--color-linen);
+    --tag-bg: var(--color-warm);
+    --tag-text: var(--color-dark);
+  }
+
+  /* LINEN theme - lightest, good for content-heavy sections like projects */
+  .bg-linen {
+    background-color: var(--color-linen);
+    --section-text: var(--color-dark);
+    --section-link: var(--color-dark);
+    --section-highlight: var(--color-muted);
+    --section-border: #d4c9c0;
+    --card-bg: #ffffff;
+    --tag-bg: var(--color-warm);
+    --tag-text: var(--color-dark);
+  }
+
+  /* WARM theme - slightly deeper, good for alternating sections like skills */
+  .bg-warm {
+    background-color: var(--color-warm);
+    --section-text: var(--color-dark);
+    --section-link: var(--color-dark);
+    --section-highlight: var(--color-muted);
+    --section-border: #c9bfb6;
+    --card-bg: var(--color-linen);
+    --tag-bg: var(--color-linen);
+    --tag-text: var(--color-dark);
+  }
+
+  /* DARK theme - footer, navbar, accent sections */
+  .bg-dark {
+    background-color: var(--color-dark);
+    --section-text: var(--color-linen);
+    --section-link: var(--color-linen);
+    --section-highlight: var(--color-greige);
+    --section-border: var(--color-muted);
+    --card-bg: #3d302a;
+    --tag-bg: #3d302a;
+    --tag-text: var(--color-linen);
+  }
+
+  
 * {
     margin: 0;
     padding: 0;
@@ -25,35 +82,35 @@ html {
 body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
+    background-color: var(--color-linen);
     overflow-x: hidden;
 }
 
 a {
-    color: var(--link-color);
+    color: var(--section-link);
     text-decoration: none;
 }
 
 h1 {
-    color: var(--text-color);
+    color: var(--section-text);
     font-size: calc(14px + 1.0vw); /* Base size of 20px, increases with viewport width */
 }
 h2 {
-    color: var(--text-color);
+    color: var(--section-text);
     font-size: calc(11px + 0.8vw);
 }
 h3 {
     font-weight: normal;
-    color: var(--text-color);
+    color: var(--section-text);
     font-size: calc(9px + 0.6vw);
 }
 
 span {
-    color: var(--text-color);
+    color: var(--section-text);
 }
 
 p {
-    color: var(--text-color);
+    color: var(--section-text);
     font-size: calc(9px + 0.5vw);
     margin-bottom: 1em;
     padding: 0;
@@ -80,7 +137,7 @@ nav {
 }
 
 nav .left a {
-    color: var(--text-color);
+    color: var(--section-text);
     font-size: 30px;
     font-weight: 600;
 }
@@ -90,15 +147,15 @@ nav .right {
 }
 
 nav .right a {
-    color: var(--text-color);
+    color: var(--section-text);
     font-size: 23px;
     margin-left: 30px;
 }
 
 nav .right a:last-child
  {
-    border: 2px solid var(--link-color);
-    color: var(--link-color);
+    border: 2px solid var(--section-link);
+    color: var(--section-link);
     padding: 3px 15px;
     border-radius: 10px;
 }
@@ -107,8 +164,8 @@ nav .right a:last-child:hover,
 nav .right a span:last-child:hover,
 nav .mobile-nav a:last-child:hover,
 nav .mobile-nav a span:last-child:hover{
-    color: var(--text-color);
-    background-color: var(--light-background-color);
+    color: var(--section-text);
+    background-color: var(--color-warm);
     border-radius: 10px;
 }
 
@@ -125,7 +182,7 @@ nav .hamburger {
     display: block;
     width: 24px;
     height: 2px;  /* Changed from 5px to 2px */
-    background: var(--text-color);
+    background: var(--section-text);
     position: relative;
     transition: background 0.2s;
 }
@@ -137,7 +194,7 @@ nav .hamburger::after {
     left: 0;  /* Added to ensure proper alignment */
     width: 24px;  /* Made consistent with parent width */
     height: 2px;
-    background: var(--text-color);
+    background: var(--section-text);
     transition: transform 0.2s;
 }
 
@@ -164,8 +221,8 @@ nav .mobile-nav {
     display: flex;  /* This makes .hero-section a flex container */
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--background-color);
+    border-bottom: 1px solid var(--section-border);
+    /* background-color: var(--background-color); */
     position: relative;
 }
 
@@ -178,7 +235,7 @@ nav .mobile-nav {
 }
 
 .hero-arrow a {
-    color: var(--link-color);
+    color: var(--section-link);
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -189,7 +246,7 @@ nav .mobile-nav {
 }
 
 .hero-arrow a:hover {
-    color: var(--text-color);
+    color: var(--section-text);
 }
 
 .hero-section .group {
@@ -212,19 +269,19 @@ nav .mobile-nav {
 .hero-section .text .external-links i {
     font-size: 20px;
     padding: 0 5px;
-    color: var(--text-color);
+    color: var(--section-text);
 }
 
 .hero-section .text h3 {
     font-size: clamp(14px, 1.5vw, 18px);
-    color: var(--text-color);
+    color: var(--section-text);
 }
 
 .hero-section .text p {
     margin-top: 15px;
     font-size: clamp(14px, 1.2vw, 20px);
     padding: 0px;
-    color: var(--text-color);
+    color: var(--section-text);
 }
 
 .hero-section .text .links {
@@ -234,8 +291,8 @@ nav .mobile-nav {
 .hero-section .text .links a {
     display: inline-block;
     padding: 5px 10px;
-    color: var(--link-color);
-    border: 2px solid var(--link-color);
+    color: var(--section-link);
+    border: 2px solid var(--section-link);
     border-radius: 5px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -243,12 +300,12 @@ nav .mobile-nav {
 }
 
 .hero-section .text .links a span {
-    color: var(--link-color);
+    color: var(--section-link);
 }
 
 .hero-section .text .links a:hover,
 .hero-section .text .links a:hover span {
-    color: var(--text-color);
+    color: var(--section-text);
 }
 
 /* NAVIGATION ARROW */
@@ -261,10 +318,10 @@ nav .mobile-nav {
 
 .arrow a   {
     font-size: 20px;
-    color: var(--link-color);
+    color: var(--section-link);
     display: inline-block;  /* This makes .hero-section a flex container */
     align-items: center;
-    border: 2px solid var(--link-color);
+    border: 2px solid var(--section-link);
     border-radius: 15px;
     padding: 10px 20px;
     text-align: center;
@@ -276,8 +333,8 @@ nav .mobile-nav {
 }
 
 .arrow a:hover   {
-    color: var(--text-color);
-    border: 2px solid var(--text-color)
+    color: var(--section-text);
+    border: 2px solid var(--section-text)
 
 }
 
@@ -289,7 +346,7 @@ nav .mobile-nav {
     display:flex;
     flex-direction: column;
     justify-content: center; 
-    background-color: var(--light-background-color);
+    /* background-color: var(--light-background-color); */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -325,7 +382,7 @@ nav .mobile-nav {
     height: 100%; /* Take full height of grid cell */
     box-sizing: border-box;
     padding: 15px;
-    background: var(--background-color);
+    background: var(--card-bg);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
                 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
@@ -368,8 +425,8 @@ nav .mobile-nav {
     padding: 0 6px;
     border-radius: 10px;
     font-size: 0.9em;
-    background-color: var(--light-background-color);
-    color: var(--link-color);
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
     white-space: nowrap; 
 }
 
@@ -388,7 +445,7 @@ nav .mobile-nav {
 .project-card .read-more {
     background-color: transparent;
     border: none;
-    color: var(--highlight-color);
+    color: var(--section-highlight);
     cursor: pointer;
     font-size: 0.9em;
     margin-top: 5px;
@@ -407,7 +464,7 @@ nav .mobile-nav {
     padding: 80px 50px;
     display:flex;
     flex-direction: column;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -459,8 +516,8 @@ nav .mobile-nav {
     justify-content: center;
     align-items: center;
     padding: 3px 8px;
-    background-color: var(--light-background-color);
-    color: var(--link-color);
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
     border-radius: 10px;
     font-size: 14px;
 }
@@ -474,7 +531,7 @@ nav .mobile-nav {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--light-background-color);
+    /* background-color: var(--light-background-color); */
 }
 
 .contact-section h2 {
@@ -493,7 +550,7 @@ nav .mobile-nav {
     flex:3;
     display: flex;
     flex-direction: column;
-    color:var(--text-color);
+    color:var(--section-text);
     max-width: 600px;
     margin: 0 auto;
     width: 100%;
@@ -502,7 +559,7 @@ nav .mobile-nav {
 .contact-section .group form input, .contact-section .group form textarea {
     font-family: 'Poppins', sans-serif;
     background-color: transparent;
-    border: 1px groove var(--text-color);
+    border: 1px groove var(--section-border);
     padding:5px;
     margin-bottom: 10px;
     outline: none;
@@ -515,7 +572,7 @@ nav .mobile-nav {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    background-color: var(--link-color);
+    background-color: var(--section-link);
     border:none;
     height: 50px;
     cursor: pointer;
@@ -531,7 +588,7 @@ footer {
     text-align: center;
     min-height: 150px; 
     flex-shrink: 0;
-    background-color: var(--light-background-color);
+    /* background-color: var(--light-background-color); */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -565,13 +622,13 @@ footer .links {
 }
 
 footer .links a {
-    color: var(--text-color);
+    color: var(--section-text);
     font-size: 20px;
     margin: 0 30px;
 }
 
 footer .links a:hover {
-    color: var(--link-color);
+    color: var(--section-highlight);
 }
 
 footer .license {
@@ -653,8 +710,8 @@ footer p {
 }
   
 .post-view .summary .skill {
-    background-color: var(--light-background-color);
-    color: var(--link-color);
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
     border-radius: 12px;
     padding: 5px 10px;
     font-size: 0.9em;
@@ -707,8 +764,8 @@ footer p {
     border-left: 4px solid #3498db;
     margin: 1em 0;
     padding: 10px 20px;
-    background-color: var(--light-background-color);
-    color: var(--text-color);
+    background-color: var(--card-bg);
+    color: var(--section-text);
     font-size: calc(10px + 0.5vw);
   }
   
@@ -723,7 +780,7 @@ footer p {
     width: 100%;
     border-collapse: collapse;
     margin: 1em 0;
-    background-color: var(--light-background-color);
+    background-color: var(--card-bg);
 }
 
 .post-view .content th {
@@ -739,7 +796,7 @@ footer p {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #e9ecef;
-    color: var(--text-color);
+    color: var(--section-text);
     font-size: calc(10px + 0.5vw); /* Matches p size */
 }
 
@@ -825,9 +882,9 @@ footer p {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--light-background-color);
+        background: var(--color-linen);
         flex-direction: column;
-        border-top: 1px solid var(--border-color);
+        border-top: 1px solid var(--section-border);
         border-radius: 0 0 10px 10px;
         z-index: 1000;
     }
@@ -837,7 +894,7 @@ footer p {
     }
 
     .mobile-nav a {
-        color: var(--text-color);
+        color: var(--section-text);
         font-size: 20px;
         padding: 5px;
         text-align: center;
