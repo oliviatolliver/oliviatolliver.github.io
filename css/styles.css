@@ -67,7 +67,7 @@
     --tag-text: var(--color-linen);
   }
 
-  
+
 * {
     margin: 0;
     padding: 0;
@@ -222,7 +222,7 @@ nav .mobile-nav {
     flex-direction: column;
     justify-content: center;
     border-bottom: 1px solid var(--section-border);
-    /* background-color: var(--background-color); */
+    background-color: var(--color-greige);
     position: relative;
 }
 
