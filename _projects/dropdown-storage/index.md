@@ -5,5 +5,5 @@ description:  Completed in MAE 2250
 skills: 
 - Fusion 360
 - Machining
-main-image: /project.webp 
+main-image: /dropdown_shelf_small.png 
 ---
