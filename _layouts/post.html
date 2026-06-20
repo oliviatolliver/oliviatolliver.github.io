@@ -2,34 +2,32 @@
 layout: wrapper
 ---
 
-<div class="post-view">
-    <div class="summary">
-        
-       
-        {% assign folder_path = page.path | split: "/" | slice: 0, 2 | join: "/" %}
-        {% assign image_path = "/" | append: folder_path | append: page['main-image'] %}       
-        <img src="{{ image_path }}" alt="{{ page.title }} image">
-        
-        <div class="title-header">
-            <h1>{{page.title}}</h1>
-        </div>
-        
-        <div class="project-description">
-            <h2>Project Overview</h2>
-            <p>{{ page.description }}</p>
-        </div>
-        <div class="skills-card">
-            <h2>Skills Used</h2> 
-            <div class="skills-list">
+<article class="post-view">
+    
+    <div class="post-hero bg-dark">
+        <div class="inner">
+            <p class="eyebrow">{{ page.context}}</p>
+            <h1 class="title">{{ page.title }}</h1>
+            <p class="description">{{ page.description }}</p>
+            <div class="skills-row">
                 {% for skill in page.skills %}
-                <span class="skill">{{ skill }}</span>    
+                    <span class="skill-tag">{{ skill }}</span>
                 {% endfor %}
             </div>
         </div>
     </div>
       
-    <div class="content">
-        {{content}}
+       
+    {% assign folder_path = page.path | split: "/" | slice: 0, 2 | join: "/" %}
+    {% assign image_path = "/" | append: folder_path | append: page['main-image'] %}       
+    <div class="post-main-image">
+        <img src="{{ image_path }}" alt="{{ page.title }} image">
     </div>
-</div>
 
+    <div class="post-content-area bg-linen">
+        <div class="inner">
+            {{content}}
+        </div>
+    </div>
+
+</article>
