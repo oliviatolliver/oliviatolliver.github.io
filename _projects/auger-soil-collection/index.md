@@ -30,20 +30,28 @@ The previous scoop-based collection method was unable to reliably reach target d
 
 ## My Contributions
 
-### System Architecture
-Defined the overall auger system concept, replacing the prior scoop design with a two-motor vertical translation and rotation assembly tailored to URC constraints — specifically the 5 kg weight limit and jam-tolerant operation requirements.
-
-### Vertical Translation Design
-Designed the linear stage using an 18-in non-captive lead screw, dual 0.5 in hardened steel guide rods, and linear ball bearings to maximize stability and minimize off-axis moments under drilling loads.
-
-### Motor Selection
-Selected and specified the Maxon EC-Flat 45 (70 W) motor with a 50:1 gearbox to deliver 5.7 Nm torque. The mechanism demonstrated 150–300 N vertical load capacity supporting a 110 lb rover under stall.
-
-### Custom Manufacturing
-Machined and fabricated end mounts, nut carriage, and a detachable auger sheath on a manual lathe and mill. Coordinated FDM and SLA 3D printing for rapid-iteration parts throughout the design cycle.
-
-### Integration & Testing
-System is currently in active testing with soil simulant. Programming and integration with the rover CA system is ongoing ahead of the Late May 2026 competition.
+<div class="contrib-grid">
+  <div class="contrib-card">
+    <p class="contrib-title">System Architecture</p>
+    <p>Defined the overall auger system concept, replacing the prior scoop design with a two-motor vertical translation and rotation assembly tailored to URC constraints — specifically the 5 kg weight limit and jam-tolerant operation requirements.</p>
+  </div>
+  <div class="contrib-card">
+    <p class="contrib-title">Vertical Translation</p>
+    <p>Designed the linear stage using an 18-in non-captive lead screw, dual 0.5 in hardened steel guide rods, and linear ball bearings to maximize stability and minimize off-axis moments under drilling loads.</p>
+  </div>
+  <div class="contrib-card">
+    <p class="contrib-title">Motor Selection</p>
+    <p>Selected and specified the Maxon EC-Flat 45 (70 W) motor with a 50:1 gearbox to deliver 5.7 Nm torque. The mechanism demonstrated 150–300 N vertical load capacity supporting a 110 lb rover under stall.</p>
+  </div>
+  <div class="contrib-card">
+    <p class="contrib-title">Custom Manufacturing</p>
+    <p>Machined and fabricated end mounts, nut carriage, and a detachable auger sheath on a manual lathe and mill. Coordinated FDM and SLA 3D printing for rapid-iteration parts throughout the design cycle.</p>
+  </div>
+  <div class="contrib-card">
+    <p class="contrib-title">Integration & Testing</p>
+    <p>System is currently in active testing with soil simulant. Programming and integration with the rover CA system is ongoing ahead of the Late May 2026 competition.</p>
+  </div>
+</div>
 
 ---
 
@@ -65,7 +73,20 @@ System is currently in active testing with soil simulant. Programming and integr
 
 ## Results & Impact
 
-- Achieved **80% deeper subsurface access** compared to the previous scoop design
-- Delivered **300–500% more sample volume per cycle**, directly addressing core limitations of the prior system
-- Meets all URC constraints including the 5 kg weight limit while maintaining jam-tolerant, reliable operation
-- Supporting a 110 lb rover under stall with 150–300 N vertical load capacity
+<div class="results-row">
+  <div class="result-card">
+    <p class="result-number">80%</p>
+    <p class="result-unit">deeper access</p>
+    <p class="result-label">Compared to the previous scoop-based design</p>
+  </div>
+  <div class="result-card">
+    <p class="result-number">300–500%</p>
+    <p class="result-unit">more sample volume</p>
+    <p class="result-label">Per collection cycle, meeting URC requirements</p>
+  </div>
+  <div class="result-card">
+    <p class="result-number">5.7 Nm</p>
+    <p class="result-unit">torque delivered</p>
+    <p class="result-label">Supporting a 110 lb rover under stall conditions</p>
+  </div>
+</div>

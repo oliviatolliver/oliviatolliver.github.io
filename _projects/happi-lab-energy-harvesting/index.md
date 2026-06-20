@@ -29,37 +29,56 @@ The system captures pneumatic energy from foot strikes during walking, stores it
 
 ## My Contributions
 
-### Pouch Design & Iteration
-Designed and experimentally tested three pouch configurations, iterating on geometry to maximize pneumatic power output:
+<div class="contrib-grid">
+  <div class="contrib-card">
+    <p class="contrib-title">Pouch Design & Iteration</p>
+    <p>Designed and tested three pouch configurations — Square (6.8" × 6.8"), Small Pill (10" × 3.5"), and Large Pill (10" × 5") — iterating on geometry to maximize pneumatic power output.</p>
+  </div>
+  <div class="contrib-card">
+    <p class="contrib-title">Experimental Testing</p>
+    <p>Built and operated a test setup with a hand pump, flow meter, pressure sensor, and DAQ system with MATLAB analysis. Measured steady-state pressure and flowrate in the 3–7 second window using P = Pressure × Flowrate.</p>
+  </div>
+  <div class="contrib-card">
+    <p class="contrib-title">Insole Mechanism</p>
+    <p>Developed a foam insole compression mechanism to pump air into a one-way valve balloon reservoir, evaluating airflow profiles and calculating turbine power output at faster walking speeds.</p>
+  </div>
+  <div class="contrib-card">
+    <p class="contrib-title">Viscoelastic Analysis</p>
+    <p>Investigated the viscoelastic behavior of latex balloons through hysteresis analysis, identifying how repeated inflation cycles affect system pressure consistency.</p>
+  </div>
+</div>
 
-| Pouch | Dimensions |
-|---|---|
-| Square Pouch | 6.8" × 6.8" |
-| Small Pill Pouch | 10" × 3.5" |
-| Large Pill Pouch | 10" × 5" |
+---
 
-### Experimental Testing
-Built and operated a test setup consisting of a hand pump, flow meter, pressure sensor, and DAQ system with MATLAB data analysis. Measured steady-state pressure and flowrate for each design in the 3–7 second window, applying the power equation **P = Pressure × Flowrate**.
+## Pouch Comparison
 
-### Insole Mechanism Development
-Developed a foam insole compression mechanism to pump air into a one-way valve balloon reservoir, evaluating airflow profiles and calculating turbine power output to optimize performance at faster walking speeds.
-
-### Viscoelastic Analysis
-Investigated the viscoelastic behavior of latex balloons through hysteresis analysis, identifying how repeated inflation cycles affect system pressure consistency — a key factor for real-world wearable reliability.
+| Pouch | Dimensions | Pressure | Flowrate | Pneumatic Output | Projected Electrical |
+|---|---|---|---|---|---|
+| Small Pill ✓ | 10" × 3.5" | 14.8 psi | 7 LPM | ~11.9 W | ~86.9 mW |
+| Large Pill | 10" × 5" | 14.75 psi | 6 LPM | ~10.2 W | ~74.2 mW |
+| Square | 6.8" × 6.8" | 14.75 psi | 6 LPM | ~10.2 W | ~74.2 mW |
 
 ---
 
 ## Results
 
-| Pouch | Pressure | Flowrate | Pneumatic Output | Projected Electrical Output |
-|---|---|---|---|---|
-| Small Pill Pouch ✓ | 14.8 psi | 7 LPM | ~11.9 W | ~86.9 mW |
-| Large Pill Pouch | 14.75 psi | 6 LPM | ~10.2 W | ~74.2 mW |
-| Square Pouch | 14.75 psi | 6 LPM | ~10.2 W | ~74.2 mW |
-
-The **Small Pill Pouch** achieved the highest pneumatic output at 11.9 W, yielding a projected electrical output of **86.9 mW** — exceeding the 10–50 mW cardiac monitor threshold and outperforming both other designs.
-
-> Projected electrical outputs were derived using the turbine's pneumatic-to-electric efficiency of 0.73%, calculated from Faraday's Law and validated via Ansys Maxwell magnetic field simulations by Devin Simmons (M.S., Cornell 2025).
+<div class="results-row">
+  <div class="result-card">
+    <p class="result-number">86.9 mW</p>
+    <p class="result-unit">projected electrical output</p>
+    <p class="result-label">Exceeds the 10–50 mW cardiac monitor threshold</p>
+  </div>
+  <div class="result-card">
+    <p class="result-number">14.8 psi</p>
+    <p class="result-unit">at 7 LPM</p>
+    <p class="result-label">Highest steady-state pressure and flowrate of all three designs</p>
+  </div>
+  <div class="result-card">
+    <p class="result-number">11.9 W</p>
+    <p class="result-unit">pneumatic output</p>
+    <p class="result-label">17% higher than both competing pouch designs</p>
+  </div>
+</div>
 
 ---
 
@@ -68,3 +87,7 @@ The **Small Pill Pouch** achieved the highest pneumatic output at 11.9 W, yieldi
 - Full system integration connecting the pouch directly to the turbine to measure actual electrical output
 - Incorporating an air valve and pressure sensor for automated air release
 - Validating performance during live human walking trials
+
+---
+
+> Projected electrical outputs derived using turbine pneumatic-to-electric efficiency of 0.73%, calculated from Faraday's Law and validated via Ansys Maxwell magnetic field simulations by Devin Simmons (M.S., Cornell 2025).
