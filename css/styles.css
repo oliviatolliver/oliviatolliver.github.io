@@ -653,10 +653,6 @@ footer p {
 }
 
 
-
-
-
-
 /* PROJECT POST VIEW - EDITORIAL LAYOUT */
 
 .post-view {
@@ -683,7 +679,7 @@ footer p {
   margin: 0 auto;
 }
 
-.post-hero .eyebrow {
+.post-hero .inner .eyebrow {
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -692,7 +688,7 @@ footer p {
   margin-bottom: 14px;
 }
 
-.post-hero .title {
+.post-hero .inner .title {
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
   color: var(--section-text);
@@ -701,7 +697,7 @@ footer p {
   margin-bottom: 18px;
 }
 
-.post-hero .description {
+.post-hero .inner .description {
   font-size: 13px;
   color: var(--color-muted);
   line-height: 1.75;
@@ -709,13 +705,13 @@ footer p {
   margin-bottom: 24px;
 }
 
-.post-hero .skills-row {
+.post-hero .inner .skills-row {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-.post-hero .skill-tag {
+.post-hero .inner .skill-tag {
   background: transparent;
   border: 1px solid var(--color-muted);
   color: var(--color-muted);
@@ -727,7 +723,7 @@ footer p {
   transition: all 0.2s ease;
 }
 
-.post-hero .skill-tag:hover {
+.post-hero .inner .skill-tag:hover {
   background: var(--color-muted);
   color: var(--color-dark);
 }
