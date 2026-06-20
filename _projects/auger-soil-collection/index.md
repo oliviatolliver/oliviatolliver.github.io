@@ -2,67 +2,70 @@
 layout: post
 title: Auger-Based Subsurface Soil Collection System
 context: Cornell Mars Rover Project · AstroTech Subteam · 2025–26
-description:  >-
-    Engineered a purpose-built auger assembly replacing a scoop-based design to achieve consistent 10 cm drilling depth and reliable sample transfer for the University Rover Competition.
-skills: 
-- Mechanical Design
-- Autodesk Inventor
-- Motor Selection
-- Tolerance Analysis
-- Manual Lathe & Milling
-- 3D Printing (FDM/SLA)
-- DFM/DFA
-- Technical Leadership
+description: >-
+  Engineered a purpose-built auger assembly replacing a scoop-based design 
+  to achieve consistent 10 cm drilling depth and reliable sample transfer 
+  for the University Rover Competition.
+skills:
+  - Mechanical Design
+  - Autodesk Inventor
+  - Motor Selection
+  - Tolerance Analysis
+  - Manual Lathe & Milling
+  - 3D Printing (FDM/SLA)
+  - DFM/DFA
+  - System Integration & Testing
+  - Technical Leadership
 
-main-image: /project.webp 
+main-image: /project-main.jpg
 ---
 
 ## Project Overview
 
-At Cornell University's HAPPI Lab (Human Augmentation in Physical and Perceptual Interactions, Sibley School of Mechanical and Aerospace Engineering), I contributed to the development of a joint pneumatic-electromechanical energy harvesting system powered by human movement, funded by the LSAMP program through Cornell's Engineering Learning Initiatives.
+The Cornell Mars Rover Project competes annually in the University Rover Competition (URC), a NASA-adjacent collegiate robotics challenge. The AstroTech subteam is responsible for the rover's science payload — specifically collecting and analyzing subsurface soil samples to detect signs of past or present life.
 
-The system captures pneumatic energy from foot strikes during walking, stores it in an on-body pouch, and releases it to drive a 2-inch diameter axial flux induction generator to produce electricity — targeting the 10–50 mW power threshold required to run a passive cardiac monitor continuously.
+The previous scoop-based collection method was unable to reliably reach target depths or transfer material into the onboard mixing chamber. As AstroTech member and incoming subteam lead, I led the full redesign of this system from concept through manufacturing, replacing it with a purpose-built auger assembly that achieves consistent 10 cm drilling depth and reliable sample transfer.
 
 ---
 
 ## My Contributions
 
-### Pouch Design & Iteration
-Designed and experimentally tested three pouch configurations, iterating on geometry to maximize pneumatic power output:
+### System Architecture
+Defined the overall auger system concept, replacing the prior scoop design with a two-motor vertical translation and rotation assembly tailored to URC constraints — specifically the 5 kg weight limit and jam-tolerant operation requirements.
 
-| Pouch | Dimensions |
+### Vertical Translation Design
+Designed the linear stage using an 18-in non-captive lead screw, dual 0.5 in hardened steel guide rods, and linear ball bearings to maximize stability and minimize off-axis moments under drilling loads.
+
+### Motor Selection
+Selected and specified the Maxon EC-Flat 45 (70 W) motor with a 50:1 gearbox to deliver 5.7 Nm torque. The mechanism demonstrated 150–300 N vertical load capacity supporting a 110 lb rover under stall.
+
+### Custom Manufacturing
+Machined and fabricated end mounts, nut carriage, and a detachable auger sheath on a manual lathe and mill. Coordinated FDM and SLA 3D printing for rapid-iteration parts throughout the design cycle.
+
+### Integration & Testing
+System is currently in active testing with soil simulant. Programming and integration with the rover CA system is ongoing ahead of the Late May 2026 competition.
+
+---
+
+## Technical Specifications
+
+| Parameter | Value |
 |---|---|
-| Square Pouch | 6.8" × 6.8" |
-| Small Pill Pouch | 10" × 3.5" |
-| Large Pill Pouch | 10" × 5" |
-
-### Experimental Testing
-Built and operated a test setup consisting of a hand pump, flow meter, pressure sensor, and DAQ system with MATLAB data analysis. Measured steady-state pressure and flowrate for each design in the 3–7 second window, applying the power equation **P = Pressure × Flowrate**.
-
-### Insole Mechanism Development
-Developed a foam insole compression mechanism to pump air into a one-way valve balloon reservoir, evaluating airflow profiles and calculating turbine power output to optimize performance at faster walking speeds.
-
-### Viscoelastic Analysis
-Investigated the viscoelastic behavior of latex balloons through hysteresis analysis, identifying how repeated inflation cycles affect system pressure consistency — a key factor for real-world wearable reliability.
+| Target Depth | 10 cm subsurface |
+| Translation Mechanism | 18-in non-captive lead screw |
+| Guide System | Dual 0.5 in hardened steel rods + linear ball bearings |
+| Motor | Maxon EC-Flat 45 (70 W), 50:1 gearbox |
+| Torque Output | 5.7 Nm |
+| Load Capacity | 150–300 N vertical |
+| Custom Parts | End mounts, nut carriage, detachable auger sheath |
+| CAD Software | Autodesk Inventor |
+| Status | Testing phase — all parts manufactured |
 
 ---
 
-## Results
+## Results & Impact
 
-| Pouch | Pressure | Flowrate | Pneumatic Output | Projected Electrical Output |
-|---|---|---|---|---|
-| Small Pill Pouch ✓ | 14.8 psi | 7 LPM | ~11.9 W | ~86.9 mW |
-| Large Pill Pouch | 14.75 psi | 6 LPM | ~10.2 W | ~74.2 mW |
-| Square Pouch | 14.75 psi | 6 LPM | ~10.2 W | ~74.2 mW |
-
-The **Small Pill Pouch** achieved the highest pneumatic output at 11.9 W, yielding a projected electrical output of **86.9 mW** — exceeding the 10–50 mW cardiac monitor threshold and outperforming both other designs.
-
-> Projected electrical outputs were derived using the turbine's pneumatic-to-electric efficiency of 0.73%, calculated from Faraday's Law and validated via Ansys Maxwell magnetic field simulations by Devin Simmons (M.S., Cornell 2025).
-
----
-
-## Future Work
-
-- Full system integration connecting the pouch directly to the turbine to measure actual electrical output
-- Incorporating an air valve and pressure sensor for automated air release
-- Validating performance during live human walking trials
+- Achieved **80% deeper subsurface access** compared to the previous scoop design
+- Delivered **300–500% more sample volume per cycle**, directly addressing core limitations of the prior system
+- Meets all URC constraints including the 5 kg weight limit while maintaining jam-tolerant, reliable operation
+- Supporting a 110 lb rover under stall with 150–300 N vertical load capacity
