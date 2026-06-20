@@ -17,7 +17,7 @@ skills:
   - System Integration & Testing
   - Technical Leadership
 
-main-image: /project-main.jpg
+main-image: /images_coming_soon.png
 ---
 
 ## Project Overview

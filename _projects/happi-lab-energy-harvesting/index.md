@@ -16,7 +16,7 @@ skills:
   - Wearable Systems
   - Research & Documentation
 
-main-image: /project-main.jpg
+main-image: /images_coming_soon.png
 ---
 
 ## Project Overview
