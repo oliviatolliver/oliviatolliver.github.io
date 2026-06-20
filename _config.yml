@@ -9,7 +9,7 @@
 
 title: Olivia Tolliver's Portfolio # This is what shows up in the tab of the browser
 
-
+password_protected: true;  # change to false to disable
 
 # Hero Section
 name: Olivia Tolliver
