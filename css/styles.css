@@ -970,7 +970,7 @@ footer p {
 
 .result-card {
   flex: 1;
-  background: var(--card-bg);
+  background: var(--color-dark);
   border-radius: 10px;
   padding: 22px 20px;
   transition: transform 0.2s ease;
@@ -983,20 +983,20 @@ footer p {
 .result-card .result-number {
   font-size: 36px;
   font-weight: 700;
-  color: var(--section-text);
+  color: var(--color-linen);
   line-height: 1;
   margin-bottom: 6px;
 }
 
 .result-card .result-unit {
   font-size: 12px;
-  color: var(--section-highlight);
+  color: var(--color-linen);
   margin-bottom: 8px;
 }
 
 .result-card .result-label {
   font-size: 11px;
-  color: var(--section-highlight);
+  color: var(--color-linen);
   line-height: 1.5;
   margin: 0;
 }
