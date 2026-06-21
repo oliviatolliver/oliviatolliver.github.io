@@ -2,13 +2,7 @@
 ---
 
 :root {
-  /* --text-color: {{ site.colors.text }};
-  --border-color: {{ site.colors.border }};
-  --link-color: {{ site.colors.link }};
-  --highlight-color: {{ site.colors.highlight }};
-  --background-color: {{ site.colors.background }};
-  --light-background-color: {{ site.colors.light_background }}; */
-  --nav-height: 80px;
+   --nav-height: 80px;
 
   /* Core palette */
   --color-greige: #aea093;
@@ -65,8 +59,20 @@
     --card-bg: #3d302a;
     --tag-bg: #3d302a;
     --tag-text: var(--color-linen);
-  }
+  } 
 
+  /* PROJECT PAGE theme - warm linen background for post/project pages */
+  .bg-project {
+    background-color: var(--color-linen);
+    --section-text: var(--color-dark);
+    --section-link: var(--color-dark);
+    --section-highlight: var(--color-muted);
+    --section-border: #d4c9c0;
+    --card-bg: var(--color-warm);
+    --tag-bg: var(--color-warm);
+    --tag-text: var(--color-dark);
+    }
+    
   
 * {
     margin: 0;
@@ -222,7 +228,6 @@ nav .mobile-nav {
     flex-direction: column;
     justify-content: center;
     border-bottom: 1px solid var(--section-border);
-    /* background-color: var(--background-color); */
     position: relative;
 }
 
@@ -346,7 +351,6 @@ nav .mobile-nav {
     display:flex;
     flex-direction: column;
     justify-content: center; 
-    /* background-color: var(--light-background-color); */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -464,7 +468,6 @@ nav .mobile-nav {
     padding: 80px 50px;
     display:flex;
     flex-direction: column;
-    /* background-color: var(--background-color); */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -531,7 +534,6 @@ nav .mobile-nav {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    /* background-color: var(--light-background-color); */
 }
 
 .contact-section h2 {
@@ -571,7 +573,7 @@ nav .mobile-nav {
 .contact-section .group form button {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: var(--card-bg);
     background-color: var(--section-link);
     border:none;
     height: 50px;
@@ -588,7 +590,6 @@ footer {
     text-align: center;
     min-height: 150px; 
     flex-shrink: 0;
-    /* background-color: var(--light-background-color); */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -684,7 +685,7 @@ footer p {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--section-highlight);
   margin-bottom: 14px;
 }
 
@@ -699,7 +700,7 @@ footer p {
 
 .post-hero .inner .description {
   font-size: 13px;
-  color: var(--color-muted);
+  color: var(--section-highlight);
   line-height: 1.75;
   max-width: 580px;
   margin-bottom: 24px;
@@ -713,8 +714,8 @@ footer p {
 
 .post-hero .inner .skill-tag {
   background: transparent;
-  border: 1px solid var(--color-muted);
-  color: var(--color-muted);
+  border: 1px solid var(--section-highlight);
+  color: var(--section-text);
   font-size: 10px;
   font-weight: 500;
   padding: 3px 12px;
@@ -724,8 +725,8 @@ footer p {
 }
 
 .post-hero .inner .skill-tag:hover {
-  background: var(--color-muted);
-  color: var(--color-dark);
+  background: var(--section-highlight);
+  color: var(--section-text);
 }
 
 .post-main-image {
@@ -782,7 +783,7 @@ footer p {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--section-highlight);
   margin-top: 24px;
   margin-bottom: 8px;
 }
@@ -818,7 +819,7 @@ footer p {
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--color-muted);
+  color: var(--section-highlight);
   font-size: 12px;
   top: 11px;
 }
@@ -863,7 +864,7 @@ footer p {
 }
 
 .post-content-area .inner td:first-child {
-  color: var(--color-muted);
+  color: var(--section-highlight);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -873,7 +874,7 @@ footer p {
 
 /* Blockquote */
 .post-content-area .inner blockquote {
-  border-left: 3px solid var(--color-muted);
+  border-left: 3px solid var(--section-highlight);
   background: var(--card-bg);
   padding: 14px 20px;
   border-radius: 0 8px 8px 0;
@@ -882,7 +883,7 @@ footer p {
 
 .post-content-area .inner blockquote p {
   font-size: 12px;
-  color: var(--color-muted);
+  color: var(--section-highlight);
   font-style: italic;
   margin: 0;
 }
@@ -947,7 +948,7 @@ footer p {
 .contrib-card .contrib-title {
   font-size: 10px;
   font-weight: 700;
-  color: var(--color-muted);
+  color: var(--section-highlight);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -969,7 +970,7 @@ footer p {
 
 .result-card {
   flex: 1;
-  /* background: var(--color-dark); */
+  background: var(--card-bg);
   border-radius: 10px;
   padding: 22px 20px;
   transition: transform 0.2s ease;
@@ -982,20 +983,20 @@ footer p {
 .result-card .result-number {
   font-size: 36px;
   font-weight: 700;
-  /* color: var(--color-linen); */
+  color: var(--section-text);
   line-height: 1;
   margin-bottom: 6px;
 }
 
 .result-card .result-unit {
   font-size: 12px;
-  color: var(--color-muted);
+  color: var(--section-highlight);
   margin-bottom: 8px;
 }
 
 .result-card .result-label {
   font-size: 11px;
-  color: var(--color-muted);
+  color: var(--section-highlight);
   line-height: 1.5;
   margin: 0;
 }
@@ -1080,7 +1081,7 @@ footer p {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--color-linen);
+        background: var(--card-bg);
         flex-direction: column;
         border-top: 1px solid var(--section-border);
         border-radius: 0 0 10px 10px;
