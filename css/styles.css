@@ -32,7 +32,7 @@
     --section-link: var(--color-dark);
     --section-highlight: var(--color-muted);
     --section-border: #d4c9c0;
-    --card-bg: #ffffff;
+    --card-bg: #7a6b5e;
     --tag-bg: var(--color-warm);
     --tag-text: var(--color-dark);
   }
@@ -529,62 +529,96 @@ nav .mobile-nav {
 
 /* SECTION 4: CONTACT */
 .contact-section {
-    margin: 0; 
+    margin: 0;
     padding: 80px 50px;
     width: 100vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
+ 
 .contact-section h2 {
     font-size: 34px;
     text-align: center;
+    margin-bottom: 40px;
 }
-
-.contact-section .group {
-    display: flex;
-    justify-content: center;
+ 
+/* outer glow ring */
+.contact-section .form-ring {
+    border: 1px solid rgba(174,160,147,0.25);
+    border-radius: 28px;
+    padding: 8px;
+    width: 100%;
+    max-width: 480px;
 }
-.contact-section .group .text {
-    flex:3;
-}
-.contact-section .group form {
-    flex:3;
+ 
+/* inner card */
+.contact-section .form-card {
+    background: var(--card-bg);
+    border-radius: 22px;
+    padding: 36px 32px;
     display: flex;
     flex-direction: column;
-    color:var(--section-text);
-    max-width: 600px;
-    margin: 0 auto;
-    width: 100%;
 }
-
-.contact-section .group form input, .contact-section .group form textarea {
+ 
+.contact-section .form-card p {
+    font-size: 13px;
+    color: var(--section-highlight);
+    text-align: center;
+    margin-bottom: 24px;
+}
+ 
+.contact-section .form-card input,
+.contact-section .form-card textarea {
     font-family: 'Poppins', sans-serif;
-    background-color: transparent;
-    border: 1px groove var(--section-border);
-    padding:5px;
+    font-size: 13px;
+    color: var(--section-text);
+    background: rgba(61, 48, 42, 0.35);
+    border: 1px solid rgba(174, 160, 147, 0.25);
+    border-radius: 10px;
+    padding: 10px 14px;
     margin-bottom: 10px;
     outline: none;
     resize: none;
-    font-size: 13px;
-    color: var(--section-text);
+    width: 100%;
+    transition: border-color 0.2s;
 }
-
-.contact-section .group form input::placeholder, .contact-section .group form textarea::placeholder {
+ 
+.contact-section .form-card input:focus,
+.contact-section .form-card textarea:focus {
+    border-color: rgba(174, 160, 147, 0.6);
+}
+ 
+.contact-section .form-card input::placeholder,
+.contact-section .form-card textarea::placeholder {
     color: var(--section-highlight);
-    opacity: 0.7;
+    opacity: 0.6;
 }
-
-.contact-section .group form button {
-    font-size: 16px;
+ 
+.contact-section .form-card textarea {
+    height: 120px;
+}
+ 
+.contact-section .form-card button {
     font-family: 'Poppins', sans-serif;
-    color: var(--card-bg);
-    background-color: var(--section-link);
-    border:none;
-    height: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--color-dark);
+    background-color: var(--color-greige);
+    border: none;
+    border-radius: 10px;
+    height: 46px;
+    margin-top: 4px;
     cursor: pointer;
-    transition: 0.1s
+    transition: opacity 0.15s;
+}
+ 
+.contact-section .form-card button:hover {
+    opacity: 0.85;
 }
 
 

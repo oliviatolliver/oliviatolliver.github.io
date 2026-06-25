@@ -3,21 +3,23 @@
     <div class="content-wrapper">
         <h2>Let's Connect</h2>
 
-        <div class="group">
-        
-            <form id="contact-form" action="https://formspree.io/f/{{site.formspree-key}}" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name">
+        <div class="form-ring">
+            <div class="form-card">
+            
+                <form id="contact-form" action="https://formspree.io/f/{{site.formspree-key}}" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
 
-                <label for="message">Message</label>
-                <textarea id="message" cols = "30" rows="10" name="message"></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" cols = "30" rows="10" name="message"></textarea>
 
-                <button type="submit">Send Message</button>
-                <p id="form-success" style="display:none; color:blue;">✓ Message sent! I'll get back to you soon.</p>
-            </form>
+                    <button type="submit">Send Message</button>
+                    <p id="form-success" style="display:none; color:blue;">✓ Message sent! I'll get back to you soon.</p>
+                </form>
+            </div>
         </div>
     </div>
 
