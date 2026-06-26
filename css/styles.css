@@ -241,7 +241,7 @@ nav .mobile-nav {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(32,22,14,.55);
+    background: rgba(32,22,14,.7);
     z-index: 1;
 }
 
