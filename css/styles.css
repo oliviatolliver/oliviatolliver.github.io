@@ -343,6 +343,49 @@ nav .mobile-nav {
 
 }
 
+/* BIO SECTION */
+.bio-section {
+  padding: 60px 40px;
+}
+
+.bio-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.bio-section .headshot img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.bio-section .text h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.bio-section .text .bio-role {
+  font-size: 13px;
+  color: var(--text);
+  opacity: 0.6;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.bio-section .text .bio-description {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
 
 /*SECTION 2: PROJECT GRID */
 .project-grid-section {
