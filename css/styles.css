@@ -220,15 +220,33 @@ nav .mobile-nav {
 
 /* SECTION 1: Hero */
 .hero-section {
-    padding: 0 50px;
-    height: calc(100vh - var(--nav-height));
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
     min-height: calc(100vh - var(--nav-height));
-    max-height: calc(100vh - var(--nav-height));
+    
     display: flex;  /* This makes .hero-section a flex container */
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    background-image: url("../assets/images/hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-bottom: 1px solid var(--section-border);
+}
+
+.hero-section::before {
+    position: absolute;
+    inset: 0;
+    background: rgba(32,22,14,.55);
+    z-index: 1;
+}
+
+.hero-section .content-wrapper {
     position: relative;
+    z-index: 2;
 }
 
 .hero-arrow {
