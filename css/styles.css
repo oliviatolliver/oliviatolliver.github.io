@@ -225,7 +225,7 @@ nav .mobile-nav {
     left: 50%;
     transform: translateX(-50%);
     min-height: calc(100vh - var(--nav-height));
-    
+
     display: flex;  /* This makes .hero-section a flex container */
     flex-direction: column;
     justify-content: center;
@@ -238,6 +238,7 @@ nav .mobile-nav {
 }
 
 .hero-section::before {
+    content: "";
     position: absolute;
     inset: 0;
     background: rgba(32,22,14,.55);
