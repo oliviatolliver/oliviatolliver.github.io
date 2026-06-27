@@ -32,7 +32,7 @@
     --section-link: var(--color-dark);
     --section-highlight: var(--color-muted);
     --section-border: #d4c9c0;
-    --card-bg: var(--color-greige);
+    --card-bg: var(--color-dark);
     --tag-bg: var(--color-warm);
     --tag-text: var(--color-dark);
   }
@@ -55,8 +55,8 @@
     --section-text: var(--color-linen);
     --section-link: var(--color-linen);
     --section-highlight: var(--color-greige);
-    --section-border: #7d6e62;
-    --card-bg: #7a6b5e;
+    --section-border: var(--color-linen);
+    --card-bg: var(--color-greige);
     --tag-bg: #7a6b5e;
     --tag-text: var(--color-linen);
   }
