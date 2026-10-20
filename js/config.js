@@ -6,7 +6,7 @@ const SITE_CONFIG = {
   // The password is NOT stored here, only a scrambled version (SHA-256 of salt + password).
   // To change the password, see "Changing the password" in README.md.
   passwordSalt: 'olivia-portfolio',
-  passwordHash: '167afaa7bfad87f3659c29b76df897b925d9377c8e71af11c712f2a116378841',
+  passwordHash: '354854e0111812ef6110139847f5889312ab47569af2c4adb94abb0136dde7f7',
 
   // Theme shown to first-time visitors: 'dark' or 'light'
   defaultTheme: 'dark'
