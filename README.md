@@ -55,3 +55,11 @@ Open your live site, press F12 (Console), paste this with your new password, pre
 
 ## Dark / light mode
 The moon button in the nav switches themes and remembers the choice. Change the first-visit theme with `defaultTheme` in `js/config.js`. Light-mode colors are at the bottom of `css/style.css`.
+
+## Photos, project images, and 3D models
+- **Your portrait:** save it as `assets/photo.jpg` (about 1200 x 1500 px, under 500 KB, lowercase name).
+- **Project card and cover image:** add `image: assets/your-cover.jpg` at the top of the project's .md file.
+- **Photos inside a project page:** write `![Caption](assets/your-photo.jpg)` anywhere in the body. Keep each under about 400 KB.
+- **3D CAD viewer:** export your model, convert it to `.glb`, save it in `assets/models/`, and add `model: assets/models/your-model.glb` to the project's .md file. Visitors can drag to rotate and scroll to zoom. If you also set `image:`, it shows while the model loads. Keep each .glb under about 15 MB.
+- **Converting CAD to .glb:** export STEP or STL from SolidWorks or Fusion, open it in Blender (free), and use File > Export > glTF 2.0 (.glb). Reducing polygon count first keeps the file small.
+- **New project:** copy `projects/_template.md`, fill it in, and add its name to `projects/index.json`.

@@ -44,9 +44,10 @@ $('#ax').style.opacity=z;$('#dim').style.opacity=z>.8?(z-.8)*5:0;
 requestAnimationFrame(loop)}
 requestAnimationFrame(loop);
 }
+function loadMV(){if(document.getElementById('mvs'))return;const t=document.createElement('script');t.type='module';t.id='mvs';t.src='https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js';document.head.appendChild(t)}
 function openP(slug){const i=PJ.findIndex(x=>x.slug===slug);if(i<0)return;const p=PJ[i],m=p.meta,pr=$('#proj');
-$('#pin').innerHTML=`<button class="back" id="bk">Back to projects</button><h1>${esc(m.title)}</h1><p class="lead">${esc(m.lead||'')}</p><div class="fig">${m.image?`<img src="${esc(m.image)}" alt="${esc(m.title)}">`:th(i)}</div>${m.results.length?`<div class="res">${m.results.map(r=>`<div class="stat"><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div>`).join('')}</div>`:''}${md(p.body)}<h3>Tools</h3><div class="tags">${tagsOf(m).map(t=>`<span>${esc(t)}</span>`).join('')}</div>`;
-pr.classList.add('open');pr.scrollTop=0;document.body.style.overflow='hidden';$('#bk').onclick=()=>{location.hash='projects'};$('#bk').focus()}
+$('#pin').innerHTML=`<button class="back" id="bk">Back to projects</button><h1>${esc(m.title)}</h1><p class="lead">${esc(m.lead||'')}</p><div class="fig${m.model?' has3d':''}">${m.model?`<model-viewer src="${esc(m.model)}" ${m.image?`poster="${esc(m.image)}"`:''} alt="3D model of ${esc(m.title)}" camera-controls auto-rotate auto-rotate-delay="1500" interaction-prompt="auto" shadow-intensity="1"></model-viewer><span class="mvh">Drag to rotate, scroll to zoom</span>`:m.image?`<img src="${esc(m.image)}" alt="${esc(m.title)}">`:th(i)}</div>${m.results.length?`<div class="res">${m.results.map(r=>`<div class="stat"><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div>`).join('')}</div>`:''}${md(p.body)}<h3>Tools</h3><div class="tags">${tagsOf(m).map(t=>`<span>${esc(t)}</span>`).join('')}</div>`;
+if(m.model)loadMV();pr.classList.add('open');pr.scrollTop=0;document.body.style.overflow='hidden';$('#bk').onclick=()=>{location.hash='projects'};$('#bk').focus()}
 function route(){const m=location.hash.match(/^#project\/(.+)/),pr=$('#proj');if(m)openP(m[1]);else{pr.classList.remove('open');document.body.style.overflow=''}}
 function initPage(){
 $('#sg').innerHTML=`<path d="${gear(14,52,44)}"/><circle r="22"/><circle r="6"/>`;
